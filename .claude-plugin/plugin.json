@@ -1,0 +1,11 @@
+{
+  "name": "levelupp-aidlc",
+  "description": "Levelupp AI-Native Development Lifecycle — serves your certified engineering constitution and domain knowledge to Claude Code, and gates risky actions to the named human owners. Guidance is live from the Levelupp server; nothing is hand-edited.",
+  "version": "1.0.0",
+  "author": { "name": "Levelupp", "url": "https://github.com/krantikumarkk/levelupp-aidlc" },
+  "homepage": "https://github.com/krantikumarkk/levelupp-aidlc",
+  "repository": "https://github.com/krantikumarkk/levelupp-aidlc",
+  "license": "UNLICENSED",
+  "keywords": ["aidlc", "claude-code", "governance", "mcp", "levelupp"],
+  "metadata": { "bundle_version": "1.0.0" }
+}

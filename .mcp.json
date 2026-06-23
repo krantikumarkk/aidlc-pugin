@@ -1,0 +1,10 @@
+{
+  "$comment": "Levelupp MCP server (Plane 1). Installed at user scope by the plugin. The API key is read from the environment — never written to the repo or committed. Default points at prod; override LEVELUPP_BASE_URL for staging (https://levelupp-staging.up.railway.app).",
+  "mcpServers": {
+    "levelupp": {
+      "type": "url",
+      "url": "${LEVELUPP_BASE_URL:-https://levelupp.misikiri.com}/mcp",
+      "headers": { "X-API-Key": "${LEVELUPP_API_KEY}" }
+    }
+  }
+}

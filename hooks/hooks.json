@@ -1,0 +1,27 @@
+{
+  "$comment": "Levelupp AIDLC hooks (Plane 1, M_AIDLC Plugin §5). All are command hooks using ${CLAUDE_PLUGIN_ROOT}; none writes into the customer repo (cache under $XDG_CACHE_HOME/levelupp). SessionStart uses http/command (NOT mcp_tool) because MCP servers typically aren't connected yet at SessionStart (timing, F1). PreToolUse does local classification first (no network for the common case), an offline MUST-NEVER deny, then curls authorize-action only for gated classes.",
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          { "type": "command", "command": "${CLAUDE_PLUGIN_ROOT}/hooks/scripts/session_bootstrap.sh", "timeout": 10 }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          { "type": "command", "command": "${CLAUDE_PLUGIN_ROOT}/hooks/scripts/classify_and_authorize.sh", "timeout": 8 }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          { "type": "command", "command": "${CLAUDE_PLUGIN_ROOT}/hooks/scripts/audit.sh" }
+        ]
+      }
+    ]
+  }
+}

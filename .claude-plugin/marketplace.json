@@ -1,0 +1,7 @@
+{
+  "name": "levelupp",
+  "owner": { "name": "Levelupp" },
+  "plugins": [
+    { "name": "levelupp-aidlc", "source": "./", "description": "Levelupp AIDLC plugin" }
+  ]
+}
