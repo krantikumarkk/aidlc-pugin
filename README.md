@@ -1,6 +1,6 @@
-# Levelupp AIDLC — Claude Code plugin
+# AIDLC — Claude Code plugin
 
-Levelupp serves your team's **certified engineering constitution** and **domain knowledge** to
+AIDLC plugin serves your team's **certified engineering constitution** and **domain knowledge** to
 Claude Code, and gates risky actions to the named human owners. Guidance is **live** from the
 Levelupp server — there are no methodology files to hand-edit or keep in sync.
 
